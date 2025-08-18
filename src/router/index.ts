@@ -9,6 +9,16 @@ import HomePage from "@/pages/HomePage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   { path: "/", name: "Home", component: HomePage },
+  {
+    path: "/about-me",
+    name: "AboutMe",
+    component: () => import("@/pages/AboutMePage.vue"),
+  },
+  {
+    path: "/work",
+    name: "Work",
+    component: () => import("@/pages/WorkPage.vue"),
+  },
 ];
 
 const router = createRouter({
