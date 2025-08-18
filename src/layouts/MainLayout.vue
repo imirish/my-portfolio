@@ -1,26 +1,32 @@
 <template>
   <div class="tw-h-screen tw-flex tw-flex-row tw-relative tw-p-10">
-    <div class="tw-flex tw-flex-row">
-      <nav
-        class="tw-flex tw-flex-col tw-justify-start tw-items-center tw-py-4 tw-pr-4 tw-gap-4"
+    <nav class="tw-flex tw-flex-col tw-justify-start tw-items-center tw-pt-10">
+      <div
+        v-for="icon in icons"
+        :key="icon.routeName"
+        class="tw-h-[2.5rem] tw-w-[2.5rem] hover:tw-bg-primary-darker hover:tw-opacity-40 tw-flex tw-justify-center tw-items-center"
       >
-        <router-link to="/">
-          <SvgIcon :iconPath="mdiHomeVariantOutline" />
+        <router-link :to="`/${icon.routeName}`">
+          <SvgIcon
+            :iconPath="icon.iconPath"
+            :iconColor="
+              $route.path === `/${icon.routeName}`
+                ? 'tw-text-primary'
+                : 'tw-text-white'
+            "
+          />
         </router-link>
-        <router-link to="/">
-          <SvgIcon :iconPath="mdiAccountDetailsOutline" />
-        </router-link>
-        <router-link to="/">
-          <SvgIcon :iconPath="mdiBriefcaseAccountOutline" />
-        </router-link>
-      </nav>
+      </div>
+    </nav>
 
-      <Divider :vertical="true" />
-    </div>
-
-    <main class="p-6">
+    <main class="tw-w-full">
       <!-- Page content loads here -->
-      <router-view />
+      <!-- <router-view /> -->
+      <RouterView v-slot="{ Component }">
+        <transition mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </RouterView>
     </main>
   </div>
 </template>
@@ -40,11 +46,19 @@ export default {
     Divider,
   },
   setup() {
+    const icons = [
+      { iconPath: mdiHomeVariantOutline, routeName: "" },
+      { iconPath: mdiAccountDetailsOutline, routeName: "about-me" },
+      { iconPath: mdiBriefcaseAccountOutline, routeName: "work" },
+    ];
     return {
-      mdiHomeVariantOutline,
-      mdiAccountDetailsOutline,
-      mdiBriefcaseAccountOutline,
+      icons,
     };
+  },
+  methods: {
+    navigateToHome() {
+      this.$router.push("/");
+    },
   },
 };
 </script>

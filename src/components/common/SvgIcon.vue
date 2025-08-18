@@ -1,7 +1,7 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    :class="iconClass"
+    :class="[iconSize, iconColor]"
     viewBox="0 0 24 24"
     fill="currentColor"
   >
@@ -16,9 +16,13 @@ export default {
       type: String,
       required: true,
     },
-    iconClass: {
+    iconSize: {
       type: String,
-      default: "tw-w-8 tw-h-8 tw-text-white",
+      default: "tw-w-8 tw-h-8",
+    },
+    iconColor: {
+      type: String,
+      default: "tw-text-white",
     },
   },
   components: {},
