@@ -14,11 +14,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "AboutMe",
     component: () => import("@/pages/AboutMePage.vue"),
   },
-  {
-    path: "/work",
-    name: "Work",
-    component: () => import("@/pages/WorkPage.vue"),
-  },
+  // {
+  //   path: "/work",
+  //   name: "Work",
+  //   component: () => import("@/pages/WorkPage.vue"),
+  // },
 ];
 
 const router = createRouter({

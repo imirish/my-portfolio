@@ -61,11 +61,11 @@ export default {
         routeName: "AboutMe",
         routePath: "about-me",
       },
-      {
-        iconPath: mdiBriefcaseAccountOutline,
-        routeName: "Work",
-        routePath: "work",
-      },
+      // {
+      //   iconPath: mdiBriefcaseAccountOutline,
+      //   routeName: "Work",
+      //   routePath: "work",
+      // },
     ];
 
     const router = useRouter();
