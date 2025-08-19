@@ -1,6 +1,6 @@
 <template>
   <div
-    class="tw-text-2xl tw-font-bold tw-font-mono tw-whitespace-pre-line"
+    class="tw-text-2xl tw-font-bold tw-whitespace-pre-line"
     :class="color"
   >
     {{ displayedText }}<span class="animate-blink" :class="blinkColor">_</span>

@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Chev";
-  src: url("/src/assets/fonts/Cheveuxdange-2LYw.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Scratch";
-  src: url("/src/assets/fonts/Scratch-ap0o.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "QuickPencil";
   src: url("/src/assets/fonts/QuickPencilRegular-0R59.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arcade";
+  src: url("src/assets/fonts/AtariFontFullVersion-ZJ23.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arcade2";
+  src: url("src/assets/fonts/AtlantisInternational-jen0.ttf") format("truetype");
 }
 
 :root {
@@ -37,7 +37,6 @@
 }
 
 body {
-  @apply tw-font-quickpencil;
   min-width: 320px;
   min-height: 100vh;
   height: auto;

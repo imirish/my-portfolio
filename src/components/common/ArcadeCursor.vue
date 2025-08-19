@@ -1,7 +1,7 @@
 <template>
   <div
     ref="cursor"
-    class="tw-fixed tw-pointer-events-none tw-z-[9999]"
+    class="tw-fixed tw-pointer-events-none tw-z-[9999] custom-cursor"
     :style="{ transform: `translate(${x}px, ${y}px)` }"
   >
     <!-- Simple pixel arrow using CSS box-shadows -->
@@ -51,5 +51,11 @@ html.arcade-cursor-active * {
 /* Ensure custom cursor never blocks pointer events */
 [ref="cursor"] {
   pointer-events: none !important;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
 }
 </style>

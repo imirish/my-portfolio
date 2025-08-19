@@ -11,7 +11,7 @@
 
     <!-- Name + Title -->
     <h1 class="tw-text-2xl tw-font-bold">
-      <TypewriterTransition text="Jane Doe" blinkColor="tw-text-[#FF79C6]" />
+      <TypewriterTransition text="Danica Irish Garcia" blinkColor="tw-text-[#FF79C6]" />
     </h1>
     <p class="tw-text-lg">Software Engineer | Front-End Developer</p>
     <p class="tw-text-sm tw-uppercase">Your Next Problem-Solver</p>
@@ -27,12 +27,12 @@
     </div>
 
     <!-- Resume Button -->
-    <a
-      href="/"
+    <div
+      @click="downloadCv"
       class="tw-mt-6 tw-bg-[#FFD580] tw-text-black tw-px-4 tw-py-2 tw-rounded tw-font-bold hover:tw-bg-yellow-400 tw-transition tw-animation-bouncePixel"
     >
       Download CV
-    </a>
+  </div>
   </section>
 </template>
 
@@ -58,6 +58,12 @@ export default {
     },
     navigateToGithub() {
       window.open("https://github.com/imirish", "_blank");
+    },
+    downloadCv() {
+      const link = document.createElement("a");
+      link.href = "/files/cv.pdf";
+      link.download = "Danica-Garcia-CV.pdf";
+      link.click();
     },
   },
 };
