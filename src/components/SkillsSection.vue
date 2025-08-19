@@ -9,6 +9,7 @@
       <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">Tailwind</div>
       <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">C#</div>
       <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">Firebase</div>
+      <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">UX</div>
     </div>
   </section>
 </template>

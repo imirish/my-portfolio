@@ -1,16 +1,16 @@
 @font-face {
   font-family: "QuickPencil";
-  src: url("/src/assets/fonts/QuickPencilRegular-0R59.ttf") format("truetype");
+  src: url("/fonts/QuickPencilRegular-0R59.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Arcade";
-  src: url("src/assets/fonts/AtariFontFullVersion-ZJ23.ttf") format("truetype");
+  src: url("/fonts/AtariFontFullVersion-ZJ23.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Arcade2";
-  src: url("src/assets/fonts/AtlantisInternational-jen0.ttf") format("truetype");
+  src: url("/fonts/AtlantisInternational-jen0.ttf") format("truetype");
 }
 
 :root {

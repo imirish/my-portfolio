@@ -52,10 +52,4 @@ html.arcade-cursor-active * {
 [ref="cursor"] {
   pointer-events: none !important;
 }
-
-@media (hover: none), (pointer: coarse) {
-  .custom-cursor {
-    display: none !important;
-  }
-}
 </style>
