@@ -14,12 +14,22 @@ module.exports = {
           "0%": { opacity: "1", transform: "translateY(0)" },
           "100%": { opacity: "0", transform: "translateY(-10px)" },
         },
-      },
-      animation: {
-        fadeIn: "fadeIn 0.6s forwards",
-        fadeOut: "fadeOut 0.6s forwards",
-      },
-      keyframes: {
+        drift: {
+          "0%, 100%": { transform: "translateX(0px) rotate(0deg)" },
+          "50%": { transform: "translateX(15px) rotate(6deg)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        blink: {
+          "0%, 50%, 100%": { opacity: "1" },
+          "25%, 75%": { opacity: "0" },
+        },
+        bouncePixel: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-4px)" },
+        },
         typeIn: {
           "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
@@ -28,10 +38,24 @@ module.exports = {
           "0%": { opacity: "1", transform: "translateY(0)" },
           "100%": { opacity: "0", transform: "translateY(-10px)" },
         },
+        scrollBg: {
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "1000px 0" },
+        },
+      },
+      boxShadow: {
+        arcade:
+          "0 0 6px rgba(0,255,255,0.8), 0 0 14px rgba(255,0,255,0.6), inset 0 0 6px rgba(0,255,255,0.4)",
       },
       animation: {
+        fadeIn: "fadeIn 0.6s forwards",
+        fadeOut: "fadeOut 0.6s forwards",
+        float: "float 4s ease-in-out infinite",
+        blink: "blink 1s step-start infinite",
+        bouncePixel: "bouncePixel 1.2s infinite",
         typeIn: "typeIn 0.4s forwards",
         typeOut: "typeOut 0.4s forwards",
+        scrollBg: "scrollBg 30s linear infinite",
       },
     },
     screens: {
@@ -41,7 +65,8 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
-    colors: {
+    colors: ({ colors }) => ({
+      pink: colors.pink,
       primary: "#a8d8f0",
       "primary-dark": "#5A7FA3",
       "primary-darker": "#041522",
@@ -61,8 +86,7 @@ module.exports = {
         900: "#1a202c",
       },
       purple: "#d7b8f3",
-      // Add more colors as needed
-    },
+    }),
 
     fontFamily: {
       sans: ["Inter", "sans-serif"],

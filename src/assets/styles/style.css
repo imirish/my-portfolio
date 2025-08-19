@@ -20,11 +20,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #0a314e; */
-
-  /* background: linear-gradient(120deg, #5A7FA3, #a8d8f0); */
-  background: linear-gradient(135deg, #634483 0%, #92adf7 100%);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -42,23 +37,11 @@
 }
 
 body {
+  @apply tw-font-quickpencil;
   min-width: 320px;
   min-height: 100vh;
   height: auto;
   width: auto;
   margin: 0; /* remove default margins */
   padding: 0;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(white 1px, transparent 1px),
-    linear-gradient(90deg, white 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.1;
 }
