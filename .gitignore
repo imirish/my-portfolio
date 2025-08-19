@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.rules
+*.tsbuildinfo
+*.env
+*.github
+*.vscode
+*.lock

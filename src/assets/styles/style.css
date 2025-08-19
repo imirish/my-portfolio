@@ -23,7 +23,7 @@
   /* background-color: #0a314e; */
 
   /* background: linear-gradient(120deg, #5A7FA3, #a8d8f0); */
-  background: linear-gradient(135deg, #4D3664 0%, #A5BDFD 100%);
+  background: linear-gradient(135deg, #634483 0%, #92adf7 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -61,15 +61,4 @@ body::before {
     linear-gradient(90deg, white 1px, transparent 1px);
   background-size: 40px 40px;
   opacity: 0.1;
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-.btn-ripple {
-  transform: scale(0);
-  animation: ripple 0.6s linear forwards;
 }

@@ -48,7 +48,7 @@ export default {
       }
 
       const currentLine = props.lines[lineIndex];
-      const speed = props.speeds[lineIndex] ?? 50;
+      // const speed = props.speeds[lineIndex] ?? 50;
       const pause = props.pauses[lineIndex] ?? 1000;
 
       // Add characters one by one

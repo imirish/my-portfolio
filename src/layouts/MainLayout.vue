@@ -10,7 +10,7 @@
           <SvgIcon
             :iconPath="icon.iconPath"
             :iconColor="
-              $route.path === `/${icon.routePath}`
+              route.path === `/${icon.routePath}`
                 ? 'tw-text-[#1C1124]'
                 : 'tw-text-white'
             "
@@ -31,7 +31,7 @@
         leave-from-class="tw-opacity-100 tw-translate-y-0"
         leave-to-class="tw-opacity-0 tw--translate-y-5"
       >
-        <RouterView :key="$route.fullPath" />
+        <RouterView :key="route.fullPath" />
       </Transition>
     </main>
   </div>
@@ -41,7 +41,6 @@
 import {
   mdiHomeVariantOutline,
   mdiAccountDetailsOutline,
-  mdiBriefcaseAccountOutline,
 } from "@mdi/js";
 import SvgIcon from "@/components/common/SvgIcon.vue";
 import Divider from "@/components/common/Divider.vue";
@@ -133,6 +132,7 @@ export default {
 
     return {
       routes,
+      route,
     };
   },
 };

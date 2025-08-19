@@ -71,7 +71,10 @@ export default {
   },
   methods: {
     navigateToLinkedIn() {
-      window.open("https://www.linkedin.com/in/danica-irish-garcia/", "_blank");
+      window.open("https://www.linkedin.com/in/irishgarcia/", "_blank");
+    },
+    navigateToGithub() {
+      window.open("https://github.com/imirish", "_blank");
     },
   },
 };
