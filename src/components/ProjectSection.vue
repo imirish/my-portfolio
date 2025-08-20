@@ -39,6 +39,11 @@ export default {
         description:
           "Developed an event management system that streamlines the planning and execution of events, improving overall efficiency and user experience.",
       },
+      {
+        title: "Mentored and supported new front-end hires",
+        description:
+          "Provided guidance and support to new front-end developers, helping them integrate into the team and improve their skills.",
+      }
     ];
 
     return {
