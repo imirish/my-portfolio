@@ -25,6 +25,5 @@ dist-ssr
 *.rules
 *.tsbuildinfo
 *.env
-*.github
 *.vscode
 *.lock
