@@ -1,12 +1,12 @@
 <template>
   <div
-    class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-[#1E1E2E] tw-h-[8rem] "
+    class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-[#1E1E2E] tw-h-[8.5rem] "
   >
     <!-- <div class="tw-h-40 tw-bg-gray-200 tw-mb-4">[Screenshot]</div> -->
-    <span class="tw-font-bold tw-text-[1.20rem] tw-tracking-tight tw-leading-tight">{{
+    <span class="tw-font-extrabold tw-text-[1.20rem] tw-tracking-tight tw-leading-tight">{{
       title
     }}</span>
-    <p class="tw-text-sm tw-leading-tight">{{ description }}</p>
+    <p class="tw-text-l tw-leading-tight">{{ description }}</p>
   </div>
 </template>
 
