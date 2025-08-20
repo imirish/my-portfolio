@@ -67,6 +67,8 @@ module.exports = {
     },
     colors: ({ colors }) => ({
       pink: colors.pink,
+      red: colors.red,
+      green: colors.green,
       primary: "#a8d8f0",
       "primary-dark": "#5A7FA3",
       "primary-darker": "#041522",

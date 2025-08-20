@@ -6,7 +6,7 @@
     >
       <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">JS</div>
       <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">Vue</div>
-      <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">Tailwind</div>
+      <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">TailwindCSS</div>
       <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">C#</div>
       <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">Firebase</div>
       <div class="tw-bg-white tw-p-4 tw-rounded tw-shadow">Flutterflow</div>
