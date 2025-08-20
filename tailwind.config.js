@@ -92,7 +92,6 @@ module.exports = {
       sans: ["Inter", "sans-serif"],
       serif: ["Merriweather", "serif"],
       mono: ["Menlo", "monospace"],
-      quickpencil: ["QuickPencil", "sans-serif"],
       arcade: ["Arcade", "sans-serif"],
       arcade2: ["Arcade2", "sans-serif"],
     },

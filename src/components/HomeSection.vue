@@ -10,11 +10,15 @@
     />
 
     <!-- Name + Title -->
-    <h1 class="tw-text-2xl tw-font-bold">
-      <TypewriterTransition text="Danica Irish Garcia" blinkColor="tw-text-[#FF79C6]" />
+    <h1 class="tw-font-bold">
+      <TypewriterTransition
+        text="Danica Irish Garcia"
+        blinkColor="tw-text-[#FF79C6]"
+        textSize="tw-text-3xl"
+      />
     </h1>
-    <p class="tw-text-lg">Software Engineer | Front-End Developer</p>
-    <p class="tw-text-sm tw-uppercase">Your Next Problem-Solver</p>
+    <p class="tw-text-xl">Software Engineer | Front-End Developer</p>
+    <p class="tw-text-l tw-uppercase">Your Next Problem-Solver</p>
 
     <!-- Social Links -->
     <div class="tw-flex tw-gap-6 tw-mt-4">
@@ -32,7 +36,7 @@
       class="tw-mt-6 tw-bg-[#FFD580] tw-text-black tw-px-4 tw-py-2 tw-rounded tw-font-bold hover:tw-bg-yellow-400 tw-transition tw-animation-bouncePixel"
     >
       Download CV
-  </div>
+    </div>
   </section>
 </template>
 
