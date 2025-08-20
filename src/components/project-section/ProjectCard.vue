@@ -3,8 +3,11 @@
     class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-[#1E1E2E] tw-h-[9rem] tw-relative"
   >
     <!-- <div class="tw-h-40 tw-bg-gray-200 tw-mb-4">[Screenshot]</div> -->
-    <div class="tw-pr-3 tw-pb-1">
+    <div v-if="isInternal" class="tw-pr-3 tw-pb-1">
       <div class="tw-absolute tw-h-[.6rem] tw-w-[.6rem] tw-bg-red-400"></div>
+    </div>
+    <div v-if="!isInternal" class="tw-pr-3 tw-pb-1">
+      <div class="tw-absolute tw-h-[.6rem] tw-w-[.6rem] tw-bg-green-400"></div>
     </div>
     <div>
       <span
@@ -26,6 +29,11 @@ export default {
     description: {
       type: String,
       required: true,
+    },
+    isInternal: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
   },
   components: {},

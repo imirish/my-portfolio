@@ -20,8 +20,14 @@
       <div class="tw-grid sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
         <!-- <div class="tw-h-40 tw-bg-gray-200 tw-mb-4">[Screenshot]</div> -->
         <div v-for="value in projects" :key="value.title">
-          <ProjectCard :title="value.title" :description="value.description" />
+          <ProjectCard :title="value.title" :description="value.description"/>
         </div>
+
+        <ProjectCard
+          title="Under Development"
+          description="Description of the project under development"
+          :isInternal="false"
+        />
       </div>
     </div>
   </section>
