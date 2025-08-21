@@ -1,6 +1,6 @@
 <template>
   <div
-    class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-[#1E1E2E] tw-h-[9rem] tw-relative"
+    class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-[#1E1E2E] tw-h-[10rem] tw-relative"
   >
     <!-- <div class="tw-h-40 tw-bg-gray-200 tw-mb-4">[Screenshot]</div> -->
     <div v-if="isInternal" class="tw-pr-3 tw-pb-1">
