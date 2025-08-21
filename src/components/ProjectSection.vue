@@ -48,17 +48,17 @@ export default {
           "Developed and maintained an internal test automation framework using Selenium WebDriver, with seamless integration to TestRail for test case management and reporting",
       },
       {
-        title: "Online/Offline Order Management System",
+        title: "Online/Offline Order Management System using React",
         description:
           "Designed and implemented a comprehensive order management system that supports both online and offline orders, enhancing the overall customer experience.",
       },
       {
-        title: "Vehicle Monitoring",
+        title: "Vehicle Monitoring using Vue",
         description:
           "Developed a vehicle monitoring system that provides real-time tracking and analytics, improving fleet management and operational efficiency.",
       },
       {
-        title: "Event Management System",
+        title: "Event Management System using Flutterflow",
         description:
           "Developed an event management system that streamlines the planning and execution of events, improving overall efficiency and user experience.",
       },
