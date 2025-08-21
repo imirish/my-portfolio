@@ -65,7 +65,7 @@ export default {
     },
     downloadCv() {
       const link = document.createElement("a");
-      link.href = "/files/cv.pdf";
+      link.href = "./files/cv.pdf";
       link.download = "Danica-Garcia-CV.pdf";
       link.click();
     },
