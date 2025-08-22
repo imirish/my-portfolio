@@ -5,13 +5,13 @@
     :style="{ transform: `translate(${x}px, ${y}px)` }"
   >
     <!-- Simple pixel arrow using CSS box-shadows -->
-    <div class="tw-w-[4px] tw-h-[4px] tw-bg-white tw-relative">
+    <div class="tw-w-[4px] tw-h-[4px] tw-bg-gray tw-relative">
       <div
-        class="tw-absolute tw-top-0 tw-left-0 tw-w-[4px] tw-h-[4px] tw-bg-white"
+        class="tw-absolute tw-top-0 tw-left-0 tw-w-[4px] tw-h-[4px] tw-bg-gray-300"
         style="
-          box-shadow: 4px 0 0 0 white, 8px 0 0 0 white, 0 4px 0 0 white,
-            4px 4px 0 0 white, 8px 4px 0 0 white, 0 8px 0 0 white,
-            4px 8px 0 0 white;
+          box-shadow: 4px 0 0 0 #E0E0E0, 8px 0 0 0 #E0E0E0, 0 4px 0 0 #E0E0E0,
+            4px 4px 0 0 #E0E0E0, 8px 4px 0 0 #E0E0E0, 0 8px 0 0 #E0E0E0,
+            4px 8px 0 0 #E0E0E0;
         "
       ></div>
     </div>
