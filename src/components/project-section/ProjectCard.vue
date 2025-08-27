@@ -1,20 +1,23 @@
 <template>
   <div
-    class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-[#1E1E2E] tw-h-[10rem] tw-relative"
+    class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-[#1E1E2E] tw-h-[12rem] tw-relative"
   >
     <!-- <div class="tw-h-40 tw-bg-gray-200 tw-mb-4">[Screenshot]</div> -->
     <div v-if="isInternal" class="tw-pr-3 tw-pb-1">
-      <div class="tw-absolute tw-h-[.6rem] tw-w-[.6rem] tw-bg-red-400"></div>
+      <div class="tw-absolute tw-h-[.4rem] tw-w-[.4rem] tw-bg-red-400"></div>
     </div>
     <div v-if="!isInternal" class="tw-pr-3 tw-pb-1">
-      <div class="tw-absolute tw-h-[.6rem] tw-w-[.6rem] tw-bg-green-400"></div>
+      <div class="tw-absolute tw-h-[.4rem] tw-w-[.4rem] tw-bg-green-400"></div>
     </div>
-    <div>
-      <span
-        class="tw-font-extrabold tw-text-[1.20rem] tw-tracking-tight tw-leading-tight"
-        >{{ title }}</span
-      >
-      <p class="tw-text-l tw-leading-tight">{{ description }}</p>
+    <div class="tw-flex tw-flex-col tw-gap-3">
+      <div class="tw-flex tw-flex-col tw-gap-2">
+        <span
+          class="tw-font-extrabold tw-text-[1.05rem] tw-tracking-tight tw-leading-tight"
+          >{{ title }}</span
+        >
+        <p class="tw-text-base tw-leading-tight">{{ description }}</p>
+      </div>
+      <p class="tw-text-sm tw-leading-tight">{{ toolDescription }}</p>
     </div>
   </div>
 </template>
@@ -27,6 +30,10 @@ export default {
       required: true,
     },
     description: {
+      type: String,
+      required: true,
+    },
+    toolDescription: {
       type: String,
       required: true,
     },

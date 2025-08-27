@@ -20,13 +20,18 @@
       <div class="tw-grid sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
         <!-- <div class="tw-h-40 tw-bg-gray-200 tw-mb-4">[Screenshot]</div> -->
         <div v-for="value in projects" :key="value.title">
-          <ProjectCard :title="value.title" :description="value.description"/>
+          <ProjectCard
+            :title="value.title"
+            :description="value.description"
+            :toolDescription="value.toolDescription"
+          />
         </div>
 
         <ProjectCard
           title="Under Development"
           description="Description of the project under development"
           :isInternal="false"
+          toolDescription="Description of the tools used in the project"
         />
       </div>
     </div>
@@ -46,26 +51,32 @@ export default {
         title: "Test Automation Using Selenium Webdriver",
         description:
           "Developed and maintained an internal test automation framework using Selenium WebDriver, with seamless integration to TestRail for test case management and reporting",
+        toolDescription: "Selenium Webdriver, TestRail, C#",
       },
       {
-        title: "Online/Offline Order Management System using React",
+        title: "Online/Offline Order Management System",
         description:
           "Designed and implemented a comprehensive order management system that supports both online and offline orders, enhancing the overall customer experience.",
+        toolDescription:
+          "VueJS, NuxtJS, TailwindCSS, Firebase, GMaps, Typescript, Jest, REST API",
       },
       {
-        title: "Vehicle Monitoring using Vue",
+        title: "Vehicle Monitoring",
         description:
           "Developed a vehicle monitoring system that provides real-time tracking and analytics, improving fleet management and operational efficiency.",
+        toolDescription: "Vue3, Vite, TailwindCSS, Vitest, Typescript, REST API",
       },
       {
-        title: "Event Management System using Flutterflow",
+        title: "Event Management System",
         description:
           "Developed an event management system that streamlines the planning and execution of events, improving overall efficiency and user experience.",
+        toolDescription: "Flutterflow, Dart, Javascript, REST API",
       },
       {
         title: "Mentored and supported new front-end hires",
         description:
           "Provided guidance and support to new front-end developers, helping them integrate into the team and improve their skills.",
+        toolDescription: "Presentation (PPT)",
       },
     ];
 
