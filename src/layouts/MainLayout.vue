@@ -32,8 +32,8 @@ import ArcadeCursor from "@/components/common/ArcadeCursor.vue";
 import FloatingButton from "@/components/common/FloatingButton.vue";
 import Navigation from "@/components/common/Navigation.vue";
 
-import { onBeforeUnmount, onMounted, ref } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import { onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
 
 export default {
   components: {
@@ -46,7 +46,7 @@ export default {
     const isTouch = ref(false);
     const showCursor = ref(true);
     const currentRoute = useRoute();
-    const pages = ["Home", "AboutMe"];
+    // const pages = ["Home", "AboutMe"];
 
     onMounted(() => {
       isTouch.value = "ontouchstart" in window || navigator.maxTouchPoints > 0;
