@@ -28,10 +28,11 @@
         </div>
 
         <ProjectCard
-          title="Under Development"
-          description="Description of the project under development"
+          title="Figma Designs"
+          description="Collection of Figma designs and prototypes"
           :isInternal="false"
-          toolDescription="Description of the tools used in the project"
+          toolDescription="Figma"
+          projectLink="https://www.figma.com/design/zETZbLCcxmnWbZ5eYyg9jH/Collection-of-Simple-Designs?node-id=0-1&t=Xa38KMSyZlvQRi2I-1"
         />
       </div>
     </div>
@@ -64,7 +65,8 @@ export default {
         title: "Vehicle Monitoring",
         description:
           "Developed a vehicle monitoring system that provides real-time tracking and analytics, improving fleet management and operational efficiency.",
-        toolDescription: "Vue3, Vite, TailwindCSS, Vitest, Typescript, REST API",
+        toolDescription:
+          "Vue3, Vite, TailwindCSS, Vitest, Typescript, REST API",
       },
       {
         title: "Event Management System",

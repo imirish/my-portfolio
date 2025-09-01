@@ -16,6 +16,12 @@
           >{{ title }}</span
         >
         <p class="tw-text-base tw-leading-tight">{{ description }}</p>
+        <a
+          v-if="projectLink"
+          class="tw-text-blue-500 hover:tw-underline"
+          :href="projectLink"
+          >View Project</a
+        >
       </div>
       <p class="tw-text-sm tw-leading-tight">{{ toolDescription }}</p>
     </div>
@@ -41,6 +47,11 @@ export default {
       type: Boolean,
       required: false,
       default: true,
+    },
+    projectLink: {
+      type: String,
+      required: false,
+      default: "",
     },
   },
   components: {},
