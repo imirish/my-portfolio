@@ -33,9 +33,9 @@
     <!-- Resume Button -->
     <div
       @click="downloadCv"
-      class="tw-mt-6 tw-bg-[#FFD580] tw-text-black tw-px-4 tw-py-2 tw-rounded tw-font-bold hover:tw-bg-yellow-400 tw-transition tw-animation-bouncePixel"
+      class="tw-mt-6 tw-bg-[#FFD580] tw-text-black tw-px-4 tw-py-1 tw-rounded tw-font-bold hover:tw-bg-yellow-400 tw-transition tw-animation-bouncePixel"
     >
-      Download CV
+      DOWNLOAD CV
     </div>
   </section>
 </template>

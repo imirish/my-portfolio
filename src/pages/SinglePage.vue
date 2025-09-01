@@ -10,8 +10,6 @@
   >
     © 2025 Danica Irish Garcia. Built with Vue3 + Tailwind.
   </footer>
-
-  <FloatingButton />
 </template>
 
 <script lang="ts">
@@ -21,7 +19,7 @@ import AboutMeSection from "@/components/AboutMeSection.vue";
 import SkillsSection from "@/components/SkillsSection.vue";
 import ProjectSection from "@/components/ProjectSection.vue";
 import ContactSection from "@/components/ContactSection.vue";
-import FloatingButton from "@/components/common/FloatingButton.vue";
+
 
 export default {
   components: {
@@ -31,7 +29,6 @@ export default {
     SkillsSection,
     ProjectSection,
     ContactSection,
-    FloatingButton,
   },
 };
 </script>

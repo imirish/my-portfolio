@@ -5,15 +5,20 @@ import {
 } from "vue-router";
 
 // Import your pages
-import SinglePage from "@/pages/SinglePage.vue";
+import AboutMePage from "@/pages/AboutMePage.vue";
+import HomePage from "@/pages/HomePage.vue";
 
 const routes: Array<RouteRecordRaw> = [
-  { path: "/", name: "Home", component: SinglePage },
-  // {
-  //   path: "/work",
-  //   name: "Work",
-  //   component: () => import("@/pages/WorkPage.vue"),
-  // },
+  {
+    path: "/my-profile",
+    redirect: {
+      name: "Home",
+    },
+    children: [
+      { path: "home", name: "Home", component: HomePage },
+      { path: "about-me", name: "AboutMe", component: AboutMePage },
+    ],
+  },
 ];
 
 const router = createRouter({
