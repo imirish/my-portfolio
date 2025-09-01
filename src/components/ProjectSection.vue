@@ -27,13 +27,13 @@
           />
         </div>
 
-        <ProjectCard
+        <!-- <ProjectCard
           title="Figma Designs"
           description="Collection of Figma designs and prototypes"
           :isInternal="false"
           toolDescription="Figma"
           projectLink="https://www.figma.com/design/zETZbLCcxmnWbZ5eYyg9jH/Collection-of-Simple-Designs?node-id=0-1&t=Xa38KMSyZlvQRi2I-1"
-        />
+        /> -->
       </div>
     </div>
   </section>
