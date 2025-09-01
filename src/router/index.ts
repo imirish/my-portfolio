@@ -7,6 +7,7 @@ import {
 // Import your pages
 import AboutMePage from "@/pages/AboutMePage.vue";
 import HomePage from "@/pages/HomePage.vue";
+import ProjectsPage from "@/pages/ProjectsPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,6 +18,7 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       { path: "home", name: "Home", component: HomePage },
       { path: "about-me", name: "AboutMe", component: AboutMePage },
+      { path: "projects", name: "Projects", component: ProjectsPage },
     ],
   },
 ];

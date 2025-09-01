@@ -6,7 +6,9 @@
         :key="key"
         class="tw-flex tw-flex-row sm:tw-flex-col tw-items-center tw-justify-center"
       >
-        <div class="tw-bg-white tw-h-[.1rem] tw-w-[3rem] sm:tw-h-[3rem] sm:tw-w-[.1rem]"></div>
+        <div
+          class="tw-bg-white tw-h-[.1rem] tw-w-[3rem] sm:tw-h-[3rem] sm:tw-w-[.1rem]"
+        ></div>
         <RouterLink :to="{ name: icon.pathName }">
           <SvgIcon
             :iconPath="icon.icon"
@@ -24,7 +26,11 @@
 </template>
 
 <script lang="ts">
-import { mdiAccountOutline, mdiHomeVariantOutline } from "@mdi/js";
+import {
+  mdiAccountOutline,
+  mdiBriefcaseOutline,
+  mdiHomeVariantOutline,
+} from "@mdi/js";
 import { useRouter } from "vue-router";
 import SvgIcon from "./SvgIcon.vue";
 
@@ -37,7 +43,7 @@ export default {
     const icons = {
       home: { pathName: "Home", icon: mdiHomeVariantOutline },
       account: { pathName: "AboutMe", icon: mdiAccountOutline },
-      // briefcase: { pathName: "Projects", icon: mdiBriefcaseOutline },
+      projects: { pathName: "Projects", icon: mdiBriefcaseOutline },
       // card: { pathName: "Contact", icon: mdiCardAccountDetailsOutline },
     };
     return {
