@@ -3,6 +3,7 @@
 interface ImportMetaEnv {
   // Core
   readonly VITE_API_URL: string;
+  readonly VITE_BLACKHOLE: boolean;
 
   // Firebase
   readonly VITE_FIREBASE_API_KEY: string;
