@@ -1,5 +1,6 @@
 import {
   createRouter,
+  createWebHashHistory,
   createWebHistory,
   type RouteRecordRaw,
 } from "vue-router";
@@ -25,7 +26,7 @@ const routes: Array<RouteRecordRaw> = [
 
 const router = createRouter({
   //   history: createWebHistory(import.meta.env.VITE_API_URL),
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 
