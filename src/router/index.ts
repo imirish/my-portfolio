@@ -12,7 +12,7 @@ import ProjectsPage from "@/pages/ProjectsPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/my-profile-danica",
+    path: "/",
     redirect: {
       name: "Home",
     },
