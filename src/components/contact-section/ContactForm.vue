@@ -9,9 +9,9 @@
 
     <form
       @submit.prevent="submitForm"
-      class="flex-col tw-gap-4"
+      class="flex-col tw-gap-4 tw-w-[20rem] sm:tw-w-[25rem]"
     >
-      <div class="flex-row tw-gap-4 tw-w-[25rem]">
+      <div class="flex-row tw-gap-4">
         <input
           type="text"
           placeholder="Your Name"
@@ -30,11 +30,11 @@
         type="text"
         placeholder="Subject"
         v-model="subject"
-        class="tw-bg-white tw-text-black tw-px-4 tw-py-2 tw-rounded tw-w-[25rem]"
+        class="tw-bg-white tw-text-black tw-px-4 tw-py-2 tw-rounded"
       />
       <textarea
         placeholder="Your Message"
-        class="tw-bg-white tw-text-black tw-px-4 tw-py-2 tw-rounded tw-w-[25rem]"
+        class="tw-bg-white tw-text-black tw-px-4 tw-py-2 tw-rounded"
         v-model="message"
       ></textarea>
       <button

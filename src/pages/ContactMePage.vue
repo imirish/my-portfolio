@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tw-h-screen flex-col tw-justify-between">
     <ContactSection />
     <Footer />
   </div>

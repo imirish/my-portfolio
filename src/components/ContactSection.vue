@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-col tw-pb-16">
+  <div class="flex-col">
     <ContactForm />
     <section class="tw-bg-[#1E1E2E] tw-text-center">
       <p class="flex-row">
