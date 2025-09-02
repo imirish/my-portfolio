@@ -1,7 +1,7 @@
 <template>
   <div class="flex-col">
     <ContactForm />
-    <section class="tw-bg-[#1E1E2E] tw-text-center">
+    <section class="tw-bg-[#1E1E2E] tw-text-center tw-pb-10">
       <p class="flex-row">
         <p class="tw-text-xl tw-text-white tw-font-bold">
           Dont like forms? Send me an
