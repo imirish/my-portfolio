@@ -1,5 +1,5 @@
 <template>
-  <ProjectSection />
+  <ProjectSection class="tw-h-screen"/>
 </template>
 
 <script lang="ts">

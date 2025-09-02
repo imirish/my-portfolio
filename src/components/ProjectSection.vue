@@ -1,6 +1,6 @@
 <template>
   <section class="tw-pl-[3rem] sm:tw-pl-[6rem] tw-py-[2.3rem] tw-pr-[3rem] tw-max-w-5xl tw-mx-auto tw-text-center">
-    <h2 class="tw-text-2xl tw-font-bold tw-mb-8">Projects</h2>
+    <h2 class="tw-text-2xl tw-font-bold tw-mb-2">Projects</h2>
     <div class="tw-flex tw-flex-col tw-gap-4">
       <div class="tw-px-2 tw-flex tw-flex-row tw-gap-3">
         <div
