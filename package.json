@@ -11,6 +11,7 @@
   "dependencies": {
     "@mdi/js": "^7.4.47",
     "@tsconfig/node18": "^18.2.4",
+    "@types/axios": "^0.14.4",
     "firebase": "^12.1.0",
     "firebase-tools": "^14.12.1",
     "vue": "^3.5.18",

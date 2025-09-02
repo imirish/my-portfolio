@@ -27,13 +27,14 @@
           />
         </div>
 
-        <!-- <ProjectCard
+        <ProjectCard
           title="Figma Designs"
           description="Collection of Figma designs and prototypes"
           :isInternal="false"
           toolDescription="Figma"
-          projectLink="https://www.figma.com/design/zETZbLCcxmnWbZ5eYyg9jH/Collection-of-Simple-Designs?node-id=0-1&t=Xa38KMSyZlvQRi2I-1"
-        /> -->
+          :isExternalProjectLink="false"
+          projectLink="FigmaProject"
+        />
       </div>
     </div>
   </section>
@@ -74,12 +75,12 @@ export default {
           "Developed an event management system that streamlines the planning and execution of events, improving overall efficiency and user experience.",
         toolDescription: "Flutterflow, Dart, Javascript, REST API",
       },
-      {
-        title: "Mentored and supported new front-end hires",
-        description:
-          "Provided guidance and support to new front-end developers, helping them integrate into the team and improve their skills.",
-        toolDescription: "Presentation (PPT)",
-      },
+      // {
+      //   title: "Mentored and supported new front-end hires",
+      //   description:
+      //     "Provided guidance and support to new front-end developers, helping them integrate into the team and improve their skills.",
+      //   toolDescription: "Presentation (PPT)",
+      // },
     ];
 
     return {

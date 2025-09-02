@@ -3,10 +3,16 @@
     class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-[#1E1E2E] tw-h-[12rem] tw-relative"
   >
     <!-- <div class="tw-h-40 tw-bg-gray-200 tw-mb-4">[Screenshot]</div> -->
-    <div v-if="isInternal" class="tw-pr-3 tw-pb-1">
+    <div
+      v-if="isInternal"
+      class="tw-pr-3 tw-pb-1"
+    >
       <div class="tw-absolute tw-h-[.4rem] tw-w-[.4rem] tw-bg-red-400"></div>
     </div>
-    <div v-if="!isInternal" class="tw-pr-3 tw-pb-1">
+    <div
+      v-if="!isInternal"
+      class="tw-pr-3 tw-pb-1"
+    >
       <div class="tw-absolute tw-h-[.4rem] tw-w-[.4rem] tw-bg-green-400"></div>
     </div>
     <div class="tw-flex tw-flex-col tw-gap-3">
@@ -17,11 +23,18 @@
         >
         <p class="tw-text-base tw-leading-tight">{{ description }}</p>
         <a
-          v-if="projectLink"
+          v-if="isExternalProjectLink && projectLink"
           class="tw-text-blue-500 hover:tw-underline"
           :href="projectLink"
           >View Project</a
         >
+        <RouterLink
+          v-if="!isExternalProjectLink && projectLink"
+          class="tw-text-blue-500 hover:tw-underline"
+          :to="{ name: projectLink }"
+        >
+          View Project
+        </RouterLink>
       </div>
       <p class="tw-text-sm tw-leading-tight">{{ toolDescription }}</p>
     </div>
@@ -44,6 +57,11 @@ export default {
       required: true,
     },
     isInternal: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    isExternalProjectLink: {
       type: Boolean,
       required: false,
       default: true,

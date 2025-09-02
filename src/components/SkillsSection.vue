@@ -40,14 +40,14 @@
     <div
       v-if="!isBoardVisible"
       @click="isBoardVisible = !isBoardVisible"
-      class="tw-mt-4 tw-w-fit tw-flex tw-justify-self-center tw-bg-black tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-gray-800"
+      class="tw-cursor-pointer tw-mt-4 tw-w-fit tw-flex tw-justify-self-center tw-bg-black tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-gray-800"
     >
       PLAY TIC-TAC-TOE
     </div>
     <div
       v-else
       @click="(isBoardVisible = !isBoardVisible), reset()"
-      class="tw-mt-4 tw-w-fit tw-flex tw-justify-self-center tw-bg-black tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-gray-800"
+      class="tw-cursor-pointer tw-mt-4 tw-w-fit tw-flex tw-justify-self-center tw-bg-black tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-gray-800"
     >
       RESET
     </div>

@@ -22,10 +22,10 @@
 
     <!-- Social Links -->
     <div class="tw-flex tw-gap-6 tw-mt-4">
-      <div class="hover:tw-scale-110 tw-transition">
+      <div class="hover:tw-scale-110 tw-transition tw-cursor-pointer">
         <SvgIcon :iconPath="mdiLinkedin" @click="navigateToLinkedIn" />
       </div>
-      <div class="hover:tw-scale-110 tw-transition">
+      <div class="hover:tw-scale-110 tw-transition tw-cursor-pointer">
         <SvgIcon :iconPath="mdiGithub" @click="navigateToGithub" />
       </div>
     </div>
@@ -33,7 +33,7 @@
     <!-- Resume Button -->
     <div
       @click="downloadCv"
-      class="tw-mt-6 tw-bg-[#FFD580] tw-text-black tw-px-4 tw-py-1 tw-rounded tw-font-bold hover:tw-bg-yellow-400 tw-transition tw-animation-bouncePixel"
+      class="tw-cursor-pointer tw-mt-6 tw-bg-[#FFD580] tw-text-black tw-px-4 tw-py-1 tw-rounded tw-font-bold hover:tw-bg-yellow-400 tw-transition tw-animation-bouncePixel"
     >
       DOWNLOAD CV
     </div>

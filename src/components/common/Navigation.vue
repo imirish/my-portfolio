@@ -12,6 +12,7 @@
         <RouterLink :to="{ name: icon.pathName }">
           <SvgIcon
             :iconPath="icon.icon"
+            iconSize="tw-w-6 tw-h-6 sm:tw-w-8 tw-h-8"
             class="tw-my-2 tw-mx-1"
             :iconColor="
               router.currentRoute.value.name === icon.pathName
@@ -29,6 +30,7 @@
 import {
   mdiAccountOutline,
   mdiBriefcaseOutline,
+  mdiCardAccountDetailsOutline,
   mdiHomeVariantOutline,
 } from "@mdi/js";
 import { useRouter } from "vue-router";
@@ -44,7 +46,7 @@ export default {
       home: { pathName: "Home", icon: mdiHomeVariantOutline },
       account: { pathName: "AboutMe", icon: mdiAccountOutline },
       projects: { pathName: "Projects", icon: mdiBriefcaseOutline },
-      // card: { pathName: "Contact", icon: mdiCardAccountDetailsOutline },
+      card: { pathName: "ContactMe", icon: mdiCardAccountDetailsOutline },
     };
     return {
       icons,
