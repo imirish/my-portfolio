@@ -1,6 +1,6 @@
 <template>
   <div
-    class="tw-h-full tw-w-full tw-font-arcade2 tw-bg-[#A7C7E7] tw-text-[#2C2C2C] dark:tw-bg-[#1E1E2E] dark:tw-text-[#F8F8F2]"
+    class="tw-h-screen tw-w-screen tw-font-arcade2 tw-bg-[#A7C7E7] tw-text-[#2C2C2C] dark:tw-bg-[#1E1E2E] dark:tw-text-[#F8F8F2]"
   >
     <div
       v-if="currentRoute.name == 'Home'"
@@ -8,7 +8,7 @@
     ></div>
     <Navigation />
 
-    <main class="tw-z-10 tw-w-full tw-h-full tw-overflow-hidden">
+    <main class="tw-z-10 tw-w-dvh tw-h-dvh tw-overflow-hidden">
       <Transition
         mode="out-in"
         enter-active-class="tw-transition-all tw-duration-300 tw-ease-out"
