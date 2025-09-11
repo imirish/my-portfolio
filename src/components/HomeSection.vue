@@ -1,6 +1,6 @@
 <template>
-  <section class="flex justify-center items-center pt-[6rem]">
-    <div class="flex flex-col gap-20 pl-[10rem]">
+  <section class="flex justify-center items-center pt-[8rem] xl:pt-[6rem]">
+    <div class="flex flex-col gap-20 pl-[15rem] xl:pl-[10rem]">
       <div class="flex flex-col gap-28 tracking-tight">
         <div class="absolute z-0 left-0">
           <img
@@ -11,35 +11,20 @@
         </div>
 
         <div class="flex flex-col items-start leading-none">
-          <h1 class="text-128px text-[#4997CD] font-semibold">Hello!</h1>
-          <h1 class="text-60px text-[#000] font-semibold">
+          <h1 class="text-48px xl:text-128px text-[#4997CD] font-semibold">
+            Hello!
+          </h1>
+          <h1 class="text-36px xl:text-60px text-[#000] font-semibold">
             I'm Danica Irish Garcia
           </h1>
           <h1 class="text-24px text-primary-text-lighter font-semibold">
             Software Engineer | Frontend Developer
           </h1>
-
-          <!-- <div class="flex flex-row gap-3 mt-4">
-            <div class="hover:scale-125 transition cursor-pointer">
-              <SvgIcon
-                :iconPath="mdiLinkedin"
-                iconClass="w-10 h-10 text-primary-text"
-                @click="navigateToLinkedIn"
-              />
-            </div>
-            <div class="hover:scale-125 transition cursor-pointer">
-              <SvgIcon
-                :iconPath="mdiGithub"
-                iconClass="w-10 h-10 text-primary-text"
-                @click="navigateToGithub"
-              />
-            </div>
-          </div> -->
         </div>
       </div>
 
       <div
-        class="flex flex-col items-end gap-6 justify-end leading-none uppercase text-black text-36px"
+        class="flex flex-col items-end gap-6 justify-end leading-none uppercase text-black text-24px xl:text-36px"
       >
         <div class="flex flex-col items-start justify-start leading-none">
           <h1 class="font-semibold">Your Next</h1>
@@ -63,7 +48,7 @@
         </div>
 
         <button
-          class="bg-[#6FC1F9] py-4 px-8 text-20px text-black rounded-full h-[4rem] flex flex-row items-center gap-4 justify-center"
+          class="bg-[#6FC1F9] py-4 px-5 xl:px-8 text-20px text-black rounded-full h-[4rem] flex flex-row items-center gap-4 justify-center"
           v-ripple
           @click="navigateToLinkedIn"
         >

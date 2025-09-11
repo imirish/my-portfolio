@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#EFF9FF] p-8 text-start rounded-md shadow text-[#1E1E2E] h-[12rem] relative w-[35rem]"
+    class="bg-[#EFF9FF] p-8 text-start rounded-md shadow text-[#1E1E2E] h-[13rem] xl:h-[12rem] relative w-[28rem] xl:w-[35rem]"
   >
     <div class="flex flex-col gap-2">
       <div class="flex flex-col gap-6">

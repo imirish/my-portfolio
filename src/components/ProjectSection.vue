@@ -21,7 +21,7 @@
           <div class="flex items-end justify-end">
             <RouterLink :to="{ name: 'FigmaProject' }">
               <button
-                class="bg-[#6FC1F9] py-1 px-1 text-12px text-black rounded-full h-[2rem] w-[13rem]"
+                class="bg-[#6FC1F9] py-1 px-1 text-12px text-black rounded-full h-[2rem] w-[10rem] xl:w-[13rem]"
                 v-ripple
               >
                 <span class="flex flex-row items-center gap-2 justify-center">
