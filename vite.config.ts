@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/my-profile-danica/",
+  base: "/my-portfolio/",
   plugins: [vue()],
   resolve: {
     alias: {

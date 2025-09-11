@@ -1,8 +1,8 @@
 <template>
-  <div class="tw-w-full tw-flex tw-flex-col tw-gap-1">
+  <div class="w-full flex flex-col gap-1">
     <div
       v-if="showLabel"
-      class="tw-flex tw-justify-between tw-text-md tw-font-medium tw-text-white"
+      class="flex justify-between text-md font-medium text-white"
     >
       <span>{{ labelName }}</span>
       <span v-if="!indeterminate">{{ percent }}%</span>
@@ -10,7 +10,7 @@
     </div>
 
     <div
-      class="tw-w-full tw-bg-gray-200 tw-overflow-hidden"
+      class="w-full bg-gray-200 overflow-hidden"
       :class="roundedClass + ' ' + heightClass"
       role="progressbar"
       :aria-valuemin="indeterminate ? undefined : 0"
@@ -24,7 +24,7 @@
           color,
           heightClass,
           roundedClass,
-          'tw-transition-all tw-duration-300 tw-ease-out',
+          'transition-all duration-300 ease-out',
         ]"
         :style="{ width: percent + '%' }"
       />
@@ -35,7 +35,7 @@
           color,
           heightClass,
           roundedClass,
-          'animate-indeterminate tw-w-1/3',
+          'animate-indeterminate w-1/3',
         ]"
       />
     </div>
@@ -65,15 +65,15 @@ export default {
     },
     color: {
       type: String,
-      default: "tw-bg-primary",
+      default: "bg-primary",
     },
     heightClass: {
       type: String,
-      default: "tw-h-3",
+      default: "h-3",
     },
     roundedClass: {
       type: String,
-      default: "tw-rounded-full",
+      default: "rounded-full",
     },
   },
 

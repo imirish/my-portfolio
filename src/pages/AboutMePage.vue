@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div class="py-6 h-screen">
     <AboutMeSection />
-    <SkillsSection />
   </div>
 </template>
 

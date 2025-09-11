@@ -1,5 +1,5 @@
 <template>
-  <ProjectSection class="tw-h-screen tw-overflow-y-auto"/>
+  <ProjectSection />
 </template>
 
 <script lang="ts">

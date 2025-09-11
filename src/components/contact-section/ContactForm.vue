@@ -1,49 +1,62 @@
 <template>
   <section
-    class="tw-pt-20 tw-pb-10 tw-bg-[#1E1E2E] tw-text-center flex-col tw-gap-4 tw-h-fit tw-items-center tw-justify-start"
+    class="pt-20 pb-10 text-center flex flex-col gap-4 items-center justify-center w-screen"
   >
-    <div class="flex-col">
-      <h1 class="tw-text-2xl tw-text-white tw-font-bold">Get in touch</h1>
-      <p class="tw-mb-4 tw-text-white">Let’s build something together!</p>
+    <div class="flex flex-col items-center justify-center">
+      <h1 class="text-2xl text-black font-bold">Get in touch</h1>
+      <p class="mb-4 text-[#1D1B1B]">
+        Have a question or project in mind? Get in touch
+      </p>
     </div>
 
-    <form
-      @submit.prevent="submitForm"
-      class="flex-col tw-gap-4 tw-w-[20rem] sm:tw-w-[25rem]"
-    >
-      <div class="flex-row tw-gap-4">
+    <div class="flex flex-col items-center justify-center gap-4 w-[25rem]">
+      <form
+        @submit.prevent="submitForm"
+        class="flex flex-col items-center justify-center gap-4 text-12px"
+      >
+        <div class="flex flex-row items-center justify-center gap-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            v-model="name"
+            class="h-[3rem] bg-[#EFF9FF] text-black px-4 py-2 rounded placeholder-gray-400 placeholder-opacity-80 placeholder:text-12px w-full"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            v-model="email"
+            class="h-[3rem] bg-[#EFF9FF] text-black px-4 py-2 rounded w-full"
+          />
+        </div>
+
         <input
           type="text"
-          placeholder="Your Name"
-          v-model="name"
-          class="tw-bg-white tw-text-black tw-px-4 tw-py-2 tw-rounded tw-w-full"
+          placeholder="Subject"
+          v-model="subject"
+          class="h-[3rem] bg-[#EFF9FF] text-black px-4 py-2 rounded w-full"
         />
-        <input
-          type="email"
-          placeholder="Your Email"
-          v-model="email"
-          class="tw-bg-white tw-text-black tw-px-4 tw-py-2 tw-rounded tw-w-full"
-        />
-      </div>
+        <textarea
+          placeholder="Your Message"
+          class="h-[7rem] bg-[#EFF9FF] text-black px-4 py-2 rounded w-full"
+          v-model="message"
+        ></textarea>
 
-      <input
-        type="text"
-        placeholder="Subject"
-        v-model="subject"
-        class="tw-bg-white tw-text-black tw-px-4 tw-py-2 tw-rounded"
-      />
-      <textarea
-        placeholder="Your Message"
-        class="tw-bg-white tw-text-black tw-px-4 tw-py-2 tw-rounded"
-        v-model="message"
-      ></textarea>
-      <button
-        type="submit"
-        class="tw-bg-[#FFD580] tw-text-black tw-px-4 tw-py-2 tw-rounded hover:tw-bg-[#f9d388]"
-      >
-        SEND MESSAGE
-      </button>
-    </form>
+        <button
+          class="bg-[#6FC1F9] py-1 px-1 text-12px text-black rounded-full h-[3rem] w-[10rem]"
+          type="submit"
+          v-ripple
+        >
+          <span class="flex flex-row items-center gap-2 justify-center">
+            <span>Send Message</span>
+            <img
+              src="@/assets/common/arrow-right.svg"
+              alt="Arrow"
+              class="w-6 h-6 inline-block mb-1"
+            />
+          </span>
+        </button>
+      </form>
+    </div>
   </section>
 </template>
 

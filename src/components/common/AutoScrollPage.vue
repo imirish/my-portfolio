@@ -35,8 +35,23 @@ export default {
 
     // --- Wheel handler ---
     const handleWheel = (event: WheelEvent) => {
-      if (event.deltaY > 0) goToRoute("next");
-      else goToRoute("prev");
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = window.innerHeight;
+
+      if (event.deltaY > 0) {
+        // Scrolling down
+        if (scrollTop + clientHeight >= scrollHeight - 1) {
+          // Reached bottom
+          goToRoute("next");
+        }
+      } else {
+        // Scrolling up
+        if (scrollTop <= 0) {
+          // Reached top
+          goToRoute("prev");
+        }
+      }
     };
 
     // --- Keyboard handler ---
@@ -54,9 +69,18 @@ export default {
       const touchEndY = event.changedTouches[0].clientY;
       const deltaY = touchStartY - touchEndY;
 
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = window.innerHeight;
+
       if (Math.abs(deltaY) > 50) {
-        if (deltaY > 0) goToRoute("next"); // swipe up
-        else goToRoute("prev"); // swipe down
+        if (deltaY > 0 && scrollTop + clientHeight >= scrollHeight - 1) {
+          // Swipe up & scrolled to bottom
+          goToRoute("next");
+        } else if (deltaY < 0 && scrollTop <= 0) {
+          // Swipe down & scrolled to top
+          goToRoute("prev");
+        }
       }
     };
 

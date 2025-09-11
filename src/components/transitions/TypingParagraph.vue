@@ -1,12 +1,19 @@
 <template>
   <div
-    class="tw-leading-4xl tw-font-bold tw-text-white tw-font-mono tw-whitespace-pre-line"
+    class="leading-4xl font-bold text-white font-mono whitespace-pre-line"
     :class="textSize"
   >
-    <div v-for="(line, index) in displayedLines" :key="index">
+    <div
+      v-for="(line, index) in displayedLines"
+      :key="index"
+    >
       {{ line }}
     </div>
-    <span v-if="isTyping" class="animate-blink">|</span>
+    <span
+      v-if="isTyping"
+      class="animate-blink"
+      >|</span
+    >
   </div>
 </template>
 
@@ -29,7 +36,7 @@ export default {
     },
     textSize: {
       type: String,
-      default: "tw-text-4xl",
+      default: "text-4xl",
     },
   },
   setup(props) {

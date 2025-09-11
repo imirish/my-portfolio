@@ -1,16 +1,16 @@
 <template>
   <div class="flex-col">
     <ContactForm />
-    <section class="tw-bg-[#1E1E2E] tw-text-center tw-pb-10">
-      <span class="flex-row">
-        <h2 class="tw-text-xl tw-text-white tw-font-bold">
-          Dont like forms? Send me an
-        </h2>
+    <section class="text-center pb-10">
+      <span class="flex-row items-center justify-center">
+        <span class="text-12px text-black font-regular">
+          Not a fan of forms? Check out my
+        </span>
         <a
-          href="mailto:imirishgarcia@gmail.com"
-          class="tw-text-[#FFD580] tw-pl-2 tw-text-xl"
+          href="https://linktr.ee/irishgarcia"
+          class="text-green-500 pl-2 text-xl"
         >
-          email
+          Linktree.
         </a>
       </span>
     </section>

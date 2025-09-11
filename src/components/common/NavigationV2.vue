@@ -1,27 +1,27 @@
 <template>
-  <div class="sticky top-0 py-4 z-20">
-    <div class="relative flex justify-center">
+  <div class="sticky top-0 z-20">
+    <div class="relative flex justify-end">
       <div
-        class="absolute flex flex-row items-center gap-10 px-10 justify-center bg-[#F6F6F6] h-[3rem] rounded-full w-fit border-2 border-black"
+        class="absolute flex flex-row items-end px-10 justify-end rounded-full py-3"
       >
         <div
           v-for="(path, key) in paths"
           :key="key"
-          class="text-primary-text-light flex items-center justify-center px-4 h-full"
+          class="relative flex items-center justify-center h-[3rem] w-[5rem]"
           :class="
-                router.currentRoute.value.name === path.pathName
-                  ? 'bg-[#94BB91]'
-                  : ''
-              "
+            router.currentRoute.value.name === 'FigmaProject'
+              ? 'text-white'
+              : 'text-black'
+          "
         >
           <RouterLink :to="{ name: path.pathName }">
             <span
+              class="cursor-pointer h-[10rem]"
               :class="
                 router.currentRoute.value.name === path.pathName
-                  ? 'text-white font-semibold'
-                  : 'hover:text-[#94BB91] hover:font-semibold'
+                  ? 'font-bold'
+                  : 'font-regular'
               "
-              class="cursor-pointer transition"
             >
               {{ path.name }}
             </span>
@@ -34,7 +34,6 @@
 
 <script lang="ts">
 import {
-  mdiAccountOutline,
   mdiBriefcaseOutline,
   mdiCardAccountDetailsOutline,
   mdiHomeVariantOutline,
@@ -50,11 +49,6 @@ export default {
     const router = useRouter();
     const paths = {
       home: { pathName: "Home", icon: mdiHomeVariantOutline, name: "Home" },
-      account: {
-        pathName: "AboutMe",
-        icon: mdiAccountOutline,
-        name: "About Me",
-      },
       projects: {
         pathName: "Projects",
         icon: mdiBriefcaseOutline,
@@ -63,7 +57,7 @@ export default {
       card: {
         pathName: "ContactMe",
         icon: mdiCardAccountDetailsOutline,
-        name: "Contact Me",
+        name: "Contact",
       },
     };
     return {

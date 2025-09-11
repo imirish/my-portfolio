@@ -1,18 +1,16 @@
 <template>
-  <div class="tw-flex tw-text-4xl tw-font-bold tw-text-white">
+  <div class="flex text-4xl font-bold text-white">
     <span
       v-for="(letter, index) in letters"
       :key="`${letter}-${index}`"
-      class="tw-inline-block tw-opacity-0"
+      class="inline-block opacity-0"
       :class="{
-        'tw-animate-typeIn': isVisible,
-        'tw-animate-typeOut': !isVisible,
+        'animate-typeIn': isVisible,
+        'animate-typeOut': !isVisible,
       }"
       :style="{ animationDelay: `${index * 0.2}s` }"
     >
-      <span
-        class="tw-h-[2.5rem] tw-w-[2.5rem] tw-flex tw-justify-center tw-items-center"
-      >
+      <span class="h-[2.5rem] w-[2.5rem] flex justify-center items-center">
         {{ letter }}
       </span>
     </span>
@@ -20,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 
 export default {
   props: {

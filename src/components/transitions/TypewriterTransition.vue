@@ -1,14 +1,19 @@
 <template>
   <div
-    class="tw-font-bold tw-whitespace-pre-line"
+    class="font-bold whitespace-pre-line"
     :class="[color, textSize]"
   >
-    {{ displayedText }}<span class="animate-blink" :class="blinkColor">_</span>
+    {{ displayedText
+    }}<span
+      class="animate-blink"
+      :class="blinkColor"
+      >_</span
+    >
   </div>
 </template>
 
 <script lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 
 export default {
   props: {
@@ -26,15 +31,15 @@ export default {
     },
     color: {
       type: String,
-      default: "tw-text-white",
+      default: "text-white",
     },
     blinkColor: {
       type: String,
-      default: "tw-text-white",
+      default: "text-white",
     },
     textSize: {
       type: String,
-      default: "tw-text-2xl",
+      default: "text-2xl",
     },
   },
   setup(props) {

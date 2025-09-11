@@ -1,66 +1,71 @@
 <template>
-  <section class="tw-pl-[3rem] sm:tw-pl-[6rem] tw-py-[2.3rem] tw-pr-[3rem] tw-max-w-5xl tw-mx-auto tw-text-center">
-    <h2 class="tw-text-2xl tw-font-bold tw-mb-2">Projects</h2>
-    <div class="tw-flex tw-flex-col tw-gap-4">
-      <div class="tw-px-2 tw-flex tw-flex-row tw-gap-3">
-        <div
-          class="tw-flex tw-flex-row tw-items-center tw-justify-center tw-gap-2"
-        >
-          <div class="tw-h-[.7rem] tw-w-[.7rem] tw-bg-red-400"></div>
-          <span>Internal</span>
-        </div>
-        <div
-          class="tw-flex tw-flex-row tw-items-center tw-justify-center tw-gap-2"
-        >
-          <div class="tw-h-[.7rem] tw-w-[.7rem] tw-bg-green-400"></div>
-          <span>Personal</span>
-        </div>
-      </div>
-
-      <div class="tw-grid sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
-        <!-- <div class="tw-h-40 tw-bg-gray-200 tw-mb-4">[Screenshot]</div> -->
-        <div v-for="value in projects" :key="value.title">
-          <ProjectCard
-            :title="value.title"
-            :description="value.description"
-            :toolDescription="value.toolDescription"
-          />
-        </div>
-
+  <section class="flex items-center justify-center py-20">
+    <div class="grid grid-cols-2 gap-8">
+      <div
+        v-for="(project, index) in projects"
+        :key="index"
+      >
         <ProjectCard
-          title="Figma Designs"
-          description="Collection of Figma designs and prototypes"
-          :isInternal="false"
-          toolDescription="Figma"
-          :isExternalProjectLink="false"
-          projectLink="FigmaProject"
+          :title="project.title"
+          :description="project.description"
+          :toolDescription="project.toolDescription"
         />
       </div>
+      <ProjectCard
+        title="Figma Designs"
+        :isInternal="false"
+        description="Collection of Figma designs and prototypes."
+        toolDescription="Figma"
+      >
+        <template #content>
+          <div class="flex items-end justify-end">
+            <RouterLink :to="{ name: 'FigmaProject' }">
+              <button
+                class="bg-[#6FC1F9] py-1 px-1 text-12px text-black rounded-full h-[2rem] w-[13rem]"
+                v-ripple
+              >
+                <span class="flex flex-row items-center gap-2 justify-center">
+                  <span>View Project</span>
+                  <img
+                    src="@/assets/common/arrow-right.svg"
+                    alt="Arrow"
+                    class="w-6 h-6 inline-block mb-1"
+                  />
+                </span>
+              </button>
+            </RouterLink>
+          </div>
+        </template>
+      </ProjectCard>
     </div>
   </section>
 </template>
 
 <script lang="ts">
+import SummaryCard from "./common/SummaryCard.vue";
 import ProjectCard from "./project-section/ProjectCard.vue";
 
 export default {
   components: {
     ProjectCard,
+    SummaryCard,
   },
   setup() {
     const projects = [
       {
-        title: "Test Automation Using Selenium Webdriver",
+        title: "Test Automation",
         description:
           "Developed and maintained an internal test automation framework using Selenium WebDriver, with seamless integration to TestRail for test case management and reporting",
         toolDescription: "Selenium Webdriver, TestRail, C#",
+        isGreen: true,
       },
       {
-        title: "Online/Offline Order Management System",
+        title: "Order Management System",
         description:
           "Designed and implemented a comprehensive order management system that supports both online and offline orders, enhancing the overall customer experience.",
         toolDescription:
           "VueJS, NuxtJS, TailwindCSS, Firebase, GMaps, Typescript, Jest, REST API",
+        isGreen: false,
       },
       {
         title: "Vehicle Monitoring",
@@ -68,19 +73,15 @@ export default {
           "Developed a vehicle monitoring system that provides real-time tracking and analytics, improving fleet management and operational efficiency.",
         toolDescription:
           "Vue3, Vite, TailwindCSS, Vitest, Typescript, REST API",
+        isGreen: false,
       },
       {
         title: "Event Management System",
         description:
           "Developed an event management system that streamlines the planning and execution of events, improving overall efficiency and user experience.",
         toolDescription: "Flutterflow, Dart, Javascript, REST API",
+        isGreen: true,
       },
-      // {
-      //   title: "Mentored and supported new front-end hires",
-      //   description:
-      //     "Provided guidance and support to new front-end developers, helping them integrate into the team and improve their skills.",
-      //   toolDescription: "Presentation (PPT)",
-      // },
     ];
 
     return {

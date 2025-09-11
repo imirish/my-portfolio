@@ -1,8 +1,8 @@
 <template>
-  <section class="tw-w-full tw-h-screen">
-    <div class="tw-w-full tw-h-screen">
+  <section class="w-full h-screen">
+    <div class="w-full h-screen">
       <iframe
-        class="tw-w-full tw-h-full tw-border-none"
+        class="w-full h-full border-none"
         :src="`https://www.figma.com/embed?embed_host=share&url=${figmaLink}`"
         allowfullscreen
       ></iframe>

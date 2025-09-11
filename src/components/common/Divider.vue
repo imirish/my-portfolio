@@ -1,9 +1,9 @@
 <template>
   <div
     :class="[
-      vertical ? `${length} tw-w-px tw-mx-2` : `tw-h-px ${width} tw-my-4`,
-      color || 'tw-bg-gray-300',
-      thickness || 'tw-border-[.01rem]',
+      vertical ? `${length} w-px mx-2` : `h-px ${width} my-4`,
+      color || 'bg-gray-300',
+      thickness || 'border-[.01rem]',
     ]"
   />
 </template>
@@ -17,19 +17,19 @@ export default {
     },
     color: {
       type: String,
-      default: "tw-bg-gray-300",
+      default: "bg-gray-300",
     },
     thickness: {
       type: String,
-      default: "tw-border-[.01rem]",
+      default: "border-[.01rem]",
     },
     length: {
       type: String,
-      default: "tw-h-full",
+      default: "h-full",
     },
     width: {
       type: String,
-      default: "tw-w-full",
+      default: "w-full",
     },
   },
 };

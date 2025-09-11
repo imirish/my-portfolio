@@ -1,6 +1,6 @@
 <template>
-  <section class="tw-py-[2rem] tw-bg-[#F2B5D4] tw-text-center">
-    <h2 class="tw-text-2xl tw-font-bold tw-mb-8 tw-text-[#1E1E2E]">
+  <section class="py-[2rem] bg-[#F2B5D4] text-center">
+    <h2 class="text-2xl font-bold mb-8 text-[#1E1E2E]">
       <span v-if="!isBoardVisible">Skills and Tools</span>
       <span v-else>
         <span v-if="winner">Winner: {{ winner }}</span>
@@ -8,14 +8,12 @@
         <span v-else>Current Player: {{ currentPlayer }}</span>
       </span>
     </h2>
-    <div
-      class="tw-grid tw-grid-cols-3 tw-gap-6 tw-max-w-4xl tw-mx-auto tw-text-[#1E1E2E]"
-    >
+    <div class="grid grid-cols-3 gap-6 max-w-4xl mx-auto text-[#1E1E2E]">
       <div
         v-if="!isBoardVisible"
         v-for="skill in skills"
         :key="skill"
-        class="tw-bg-white tw-p-4 tw-rounded tw-shadow tw-text-base sm:tw-text-xl"
+        class="bg-white p-4 rounded shadow text-base sm:text-xl"
       >
         {{ skill }}
       </div>
@@ -25,11 +23,11 @@
         v-for="(cell, idx) in board"
         :key="idx"
         @click="handleClick(idx)"
-        class="tw-bg-white tw-p-4 tw-h-14 tw-rounded tw-shadow hover:tw-scale-105 tw-transform tw-transition-transform disabled:tw-opacity-60 disabled:tw-cursor-not-allowed"
+        class="bg-white p-4 h-14 rounded shadow hover:scale-105 transform transition-transform disabled:opacity-60 disabled:cursor-not-allowed"
         :class="[
-          'tw-bg-gray-50',
-          cell === 'X' ? 'tw-text-rose-600' : '',
-          cell === 'O' ? 'tw-text-sky-600' : '',
+          'bg-gray-50',
+          cell === 'X' ? 'text-rose-600' : '',
+          cell === 'O' ? 'text-sky-600' : '',
         ]"
         :disabled="!!cell || !!winner || currentPlayer === botPlayer"
       >
@@ -40,14 +38,14 @@
     <div
       v-if="!isBoardVisible"
       @click="isBoardVisible = !isBoardVisible"
-      class="tw-cursor-pointer tw-mt-4 tw-w-fit tw-flex tw-justify-self-center tw-bg-black tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-gray-800"
+      class="cursor-pointer mt-4 w-fit flex justify-self-center bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
     >
       PLAY TIC-TAC-TOE
     </div>
     <div
       v-else
       @click="(isBoardVisible = !isBoardVisible), reset()"
-      class="tw-cursor-pointer tw-mt-4 tw-w-fit tw-flex tw-justify-self-center tw-bg-black tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-gray-800"
+      class="cursor-pointer mt-4 w-fit flex justify-self-center bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
     >
       RESET
     </div>

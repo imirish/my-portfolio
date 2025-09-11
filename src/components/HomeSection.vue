@@ -1,47 +1,86 @@
 <template>
-  <section
-    class="tw-flex tw-flex-col tw-items-center tw-justify-center tw-h-screen tw-text-center tw-gap-4 tw-overflow-y-auto"
-  >
-    <!-- Avatar -->
-    <img
-      src="@/assets/homepage/profile.svg"
-      alt="Pixel Avatar"
-      class="tw-w-32 tw-h-32 tw-rounded-full tw-border-4 tw-border-white tw-animate-float"
-    />
+  <section class="flex justify-center items-center pt-[6rem]">
+    <div class="flex flex-col gap-20 pl-[10rem]">
+      <div class="flex flex-col gap-28 tracking-tight">
+        <div class="absolute z-0 left-0">
+          <img
+            src="@/assets/homepage/avatar.svg"
+            alt="Avatar"
+            class="h-[40rem]"
+          />
+        </div>
 
-    <!-- Name + Title -->
-    <h1 class="tw-font-bold">
-      <TypewriterTransition
-        text="Danica Irish Garcia"
-        blinkColor="tw-text-[#FF79C6]"
-        textSize="tw-text-3xl"
-      />
-    </h1>
-    <p class="tw-text-xl">Software Engineer | Front-End Developer</p>
-    <p class="tw-text-l tw-uppercase">Your Next Problem-Solver</p>
+        <div class="flex flex-col items-start leading-none">
+          <h1 class="text-128px text-[#4997CD] font-semibold">Hello!</h1>
+          <h1 class="text-60px text-[#000] font-semibold">
+            I'm Danica Irish Garcia
+          </h1>
+          <h1 class="text-24px text-primary-text-lighter font-semibold">
+            Software Engineer | Frontend Developer
+          </h1>
 
-    <!-- Social Links -->
-    <div class="tw-flex tw-gap-6 tw-mt-4">
-      <div class="hover:tw-scale-110 tw-transition tw-cursor-pointer">
-        <SvgIcon :iconPath="mdiLinkedin" @click="navigateToLinkedIn" />
+          <!-- <div class="flex flex-row gap-3 mt-4">
+            <div class="hover:scale-125 transition cursor-pointer">
+              <SvgIcon
+                :iconPath="mdiLinkedin"
+                iconClass="w-10 h-10 text-primary-text"
+                @click="navigateToLinkedIn"
+              />
+            </div>
+            <div class="hover:scale-125 transition cursor-pointer">
+              <SvgIcon
+                :iconPath="mdiGithub"
+                iconClass="w-10 h-10 text-primary-text"
+                @click="navigateToGithub"
+              />
+            </div>
+          </div> -->
+        </div>
       </div>
-      <div class="hover:tw-scale-110 tw-transition tw-cursor-pointer">
-        <SvgIcon :iconPath="mdiGithub" @click="navigateToGithub" />
-      </div>
-    </div>
 
-    <!-- Resume Button -->
-    <div
-      @click="downloadCv"
-      class="tw-cursor-pointer tw-mt-6 tw-bg-[#FFD580] tw-text-black tw-px-4 tw-py-1 tw-rounded tw-font-bold hover:tw-bg-yellow-400 tw-transition tw-animation-bouncePixel"
-    >
-      DOWNLOAD CV
+      <div
+        class="flex flex-col items-end gap-6 justify-end leading-none uppercase text-black text-36px"
+      >
+        <div class="flex flex-col items-start justify-start leading-none">
+          <h1 class="font-semibold">Your Next</h1>
+          <span class="flex items-center font-semibold">
+            <span>
+              Pr
+              <img
+                src="@/assets/homepage/letter-o.svg"
+                alt="Letter O"
+                class="w-6 h-6 inline-block mb-1"
+              />
+              blem S
+              <img
+                src="@/assets/homepage/letter-o.svg"
+                alt="Letter O"
+                class="w-6 h-6 inline-block mb-1"
+              />
+              lver
+            </span>
+          </span>
+        </div>
+
+        <button
+          class="bg-[#6FC1F9] py-4 px-8 text-20px text-black rounded-full h-[4rem] flex flex-row items-center gap-4 justify-center"
+          v-ripple
+          @click="navigateToLinkedIn"
+        >
+          <span>Connect With Me</span>
+          <img
+            src="@/assets/common/arrow-right.svg"
+            alt="Arrow"
+            class="w-10 h-10 inline-block mb-1"
+          />
+        </button>
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { mdiLinkedin, mdiGithub } from "@mdi/js";
+import { mdiArrowRightThin, mdiGithub, mdiLinkedin } from "@mdi/js";
 import SvgIcon from "./common/SvgIcon.vue";
 import TypewriterTransition from "./transitions/TypewriterTransition.vue";
 
@@ -54,6 +93,7 @@ export default {
     return {
       mdiLinkedin,
       mdiGithub,
+      mdiArrowRightThin,
     };
   },
   methods: {

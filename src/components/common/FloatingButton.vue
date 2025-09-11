@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 const isVisible = ref(false);
 
@@ -25,7 +25,7 @@ const scrollToTop = () => {
     v-show="isVisible"
     @click="scrollToTop"
     aria-label="Scroll to top"
-    class="tw-fixed tw-bottom-6 tw-right-6 tw-bg-red-500 tw-text-white tw-p-4 tw-rounded-full tw-shadow-lg hover:tw-translate-y-[-6px] tw-transition-transform tw-duration-300 tw-flex tw-items-center tw-justify-center tw-animate-bounce"
+    class="fixed bottom-6 right-6 bg-red-500 text-white p-4 rounded-full shadow-lg hover:translate-y-[-6px] transition-transform duration-300 flex items-center justify-center animate-bounce"
   >
     🚀
   </button>
