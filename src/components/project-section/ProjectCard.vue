@@ -1,8 +1,8 @@
 <template>
   <div
-    class="bg-[#EFF9FF] p-8 text-start rounded-md shadow text-[#1E1E2E] h-[13rem] xl:h-[12rem] relative w-[28rem] xl:w-[35rem]"
+    class="bg-[#EFF9FF] p-8 text-start rounded-md shadow text-[#1E1E2E] h-[15rem] l:h-[13rem]  xl:h-[12rem] relative w-[20rem] l:w-[28rem] xl:w-[35rem]"
   >
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-4 l:gap-2">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-2">
           <span class="font-extrabold text-18px tracking-tight leading-tight">

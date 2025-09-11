@@ -6,7 +6,7 @@
           <img
             src="@/assets/homepage/avatar.svg"
             alt="Avatar"
-            class="h-[40rem]"
+            class="h-[33rem] l:h-[40rem]"
           />
         </div>
 
@@ -52,7 +52,7 @@
           v-ripple
           @click="navigateToLinkedIn"
         >
-          <span>Connect With Me</span>
+          <span class="text-16px">Connect With Me</span>
           <img
             src="@/assets/common/arrow-right.svg"
             alt="Arrow"
