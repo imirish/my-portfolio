@@ -21,7 +21,7 @@
           <div class="flex items-end justify-end">
             <RouterLink :to="{ name: 'FigmaProject' }">
               <button
-                class="bg-[#6FC1F9] py-1 px-1 text-12px text-black rounded-full h-[2rem] w-[10rem] xl:w-[13rem]"
+                class="bg-[#6FC1F9] flex items-center justify-center text-[9px] md:text-12px text-black rounded-full h-[2rem] w-[7rem] md:w-[10rem] xl:w-[13rem]"
                 v-ripple
               >
                 <span class="flex flex-row items-center gap-2 justify-center">
@@ -29,7 +29,7 @@
                   <img
                     src="@/assets/common/arrow-right.svg"
                     alt="Arrow"
-                    class="w-6 h-6 inline-block mb-1"
+                    class="w-6 h-6 inline-block"
                   />
                 </span>
               </button>

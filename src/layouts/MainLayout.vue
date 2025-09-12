@@ -1,5 +1,6 @@
 <template>
   <div class="h-screen w-screen font-poppins">
+    <AutoScrollPage :pages="pages" />
     <Logo />
     <NavigationV2 />
     <main class="overflow-hidden">
@@ -12,11 +13,16 @@
         leave-from-class="opacity-100 translate-y-0"
         leave-to-class="opacity-0 -translate-y-5"
       >
-        <RouterView :key="currentRoute.fullPath" />
+        <RouterView
+          :key="currentRoute.fullPath"
+          v-slot="{ Component }"
+        >
+          <KeepAlive include="Home">
+            <component :is="Component" />
+          </KeepAlive>
+        </RouterView>
       </Transition>
     </main>
-
-    <AutoScrollPage :pages="pages" />
   </div>
 </template>
 

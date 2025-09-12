@@ -4,7 +4,7 @@
   >
     <div class="flex flex-col items-center justify-center">
       <h1 class="text-2xl text-black font-bold">Get in touch</h1>
-      <p class="mb-4 text-[#1D1B1B]">
+      <p class="text-[12px] md:text-16px mb-4 text-[#1D1B1B]">
         Have a question or project in mind? Get in touch
       </p>
     </div>
@@ -19,7 +19,7 @@
             type="text"
             placeholder="Your Name"
             v-model="name"
-            class="h-[3rem] bg-[#EFF9FF] text-black px-4 py-2 rounded placeholder-gray-400 placeholder-opacity-80 placeholder:text-12px w-full"
+            class="h-[3rem] bg-[#EFF9FF] text-black px-4 py-2 rounded  w-full"
           />
           <input
             type="email"
@@ -51,7 +51,7 @@
             <img
               src="@/assets/common/arrow-right.svg"
               alt="Arrow"
-              class="w-6 h-6 inline-block mb-1"
+              class="w-6 h-6 inline-block"
             />
           </span>
         </button>
