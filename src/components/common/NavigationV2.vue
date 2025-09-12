@@ -2,7 +2,7 @@
   <div class="sticky top-0 z-20">
     <div class="relative flex justify-end">
       <div
-        class="absolute flex flex-row items-end px-10 justify-end rounded-full py-3"
+        class="absolute flex flex-row items-end px-6 xs:px-10 justify-end rounded-full py-3 text-12px xs:text-16px"
       >
         <div
           v-for="(path, key) in paths"

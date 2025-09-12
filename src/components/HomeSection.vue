@@ -1,6 +1,6 @@
 <template>
   <section class="relative h-screen flex justify-center pt-20 md:pt-[10rem]">
-    <div class="flex flex-col gap-20 md:pl-[15rem] xl:pl-0">
+    <div class="flex flex-col gap-12 xs:gap-20 pl-6 xs:pl-0 md:pl-[15rem] xl:pl-0">
       <div class=" flex flex-col gap-28 tracking-tight">
         <div class="absolute z-0 left-0 bottom-0">
           <img
@@ -10,7 +10,7 @@
           />
         </div>
 
-        <div class="flex flex-col items-start leading-none">
+        <div class="flex flex-col items-start leading-none gap-2">
           <h1 class="text-48px xl:text-128px text-[#4997CD] font-semibold">
             Hello!
           </h1>
@@ -52,7 +52,7 @@
           v-ripple
           @click="navigateToLinkedIn"
         >
-          <span class="text-12px l:text-16px">Connect With Me</span>
+          <span class="text-12px lg:text-16px">Connect With Me</span>
           <img
             src="@/assets/common/arrow-right.svg"
             alt="Arrow"

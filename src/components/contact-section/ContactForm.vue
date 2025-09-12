@@ -9,7 +9,7 @@
       </p>
     </div>
 
-    <div class="flex flex-col items-center justify-center gap-4 w-[25rem]">
+    <div class="flex flex-col items-center justify-center gap-4 w-[18rem] xs:w-[22rem] sm:w-[25rem]">
       <form
         @submit.prevent="submitForm"
         class="flex flex-col items-center justify-center gap-4 text-12px"

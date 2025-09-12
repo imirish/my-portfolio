@@ -1,11 +1,11 @@
 <template>
   <div
-    class="bg-[#EFF9FF] p-4 md:p-8 text-start rounded-md shadow text-[#1E1E2E] h-[15rem] l:h-[13rem] xl:h-[12rem] relative w-[11rem] md:w-[20rem] l:w-[28rem] xl:w-[35rem]"
+    class="bg-[#EFF9FF] p-8 text-start rounded-md shadow text-[#1E1E2E] h-[15rem] l:h-[13rem] xl:h-[12rem] relative w-[20rem] md:w-[20rem] l:w-[28rem] xl:w-[35rem]"
   >
-    <div class="flex flex-col gap-4 l:gap-2">
+    <div class="flex flex-col gap-10 md:gap-6 lg:gap-0">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-2">
-          <span class="font-extrabold text-14px md:text-18px tracking-tight leading-tight">
+          <span class="font-extrabold text-18px tracking-tight leading-tight">
             {{ title }}
           </span>
           <span
@@ -20,7 +20,7 @@
           >
             personal
           </span>
-          <p class="text-10px md:text-12px leading-tight">
+          <p class="text-12px leading-tight">
             {{ description }}
           </p>
         </div>
