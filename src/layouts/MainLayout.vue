@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen font-poppins">
+  <div class="h-screen w-screen font-poppins lg:px-[3rem]">
     <AutoScrollPage :pages="pages" />
     <Logo />
     <NavigationV2 />
