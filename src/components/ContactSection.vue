@@ -8,7 +8,7 @@
         </span>
         <a
           href="https://linktr.ee/irishgarcia"
-          class="text-green-500 pl-2 text-xl"
+          class="text-green-500 text-xl"
         >
           Linktree.
         </a>
