@@ -1,7 +1,9 @@
 <template>
   <section class="relative h-screen flex justify-center pt-20 md:pt-[10rem]">
-    <div class="flex flex-col gap-12 xs:gap-20 pl-6 xs:pl-0 md:pl-[15rem] xl:pl-0">
-      <div class=" flex flex-col gap-28 tracking-tight">
+    <div
+      class="flex flex-col gap-12 xs:gap-20 pl-6 xs:pl-0 md:pl-[15rem] xl:pl-0"
+    >
+      <div class="flex flex-col gap-28 tracking-tight">
         <div class="absolute z-0 left-0 bottom-0">
           <img
             src="@/assets/homepage/avatar.svg"
@@ -14,10 +16,14 @@
           <h1 class="text-48px xl:text-128px text-[#4997CD] font-semibold">
             Hello!
           </h1>
-          <h1 class="text-30px md:text-36px xl:text-60px text-[#000] font-semibold">
+          <h1
+            class="text-30px md:text-36px xl:text-60px text-[#000] font-semibold"
+          >
             I'm Danica Irish Garcia
           </h1>
-          <h1 class="text-18px md:text-24px text-primary-text-lighter font-semibold">
+          <h1
+            class="text-18px md:text-24px text-primary-text-lighter font-semibold"
+          >
             Software Engineer | Frontend Developer
           </h1>
         </div>
@@ -48,11 +54,11 @@
         </div>
 
         <button
-          class="bg-[#6FC1F9] py-4 px-5 xl:px-8 text-20px text-black rounded-full h-[3rem] l:h-[4rem] flex flex-row items-center gap-4 justify-center"
+          class="bg-[#6FC1F9] primary-btn"
           v-ripple
-          @click="navigateToLinkedIn"
+          @click="downloadCv"
         >
-          <span class="text-12px lg:text-16px">Connect With Me</span>
+          <span class="text-12px lg:text-16px">Download CV</span>
           <img
             src="@/assets/common/arrow-right.svg"
             alt="Arrow"
@@ -90,7 +96,8 @@ export default {
     },
     downloadCv() {
       const link = document.createElement("a");
-      link.href = "./files/cv.pdf";
+      link.href =
+        "https://drive.google.com/uc?export=download&id=1jgjWzX2aZT2S-V4slX4zQOGkYuN00ECu";
       link.download = "Danica-Garcia-CV.pdf";
       link.click();
     },
