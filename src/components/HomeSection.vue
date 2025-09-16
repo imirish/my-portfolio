@@ -89,12 +89,10 @@
 <script lang="ts">
 import { mdiArrowRightThin, mdiGithub, mdiLinkedin } from "@mdi/js";
 import SvgIcon from "./common/SvgIcon.vue";
-import TypewriterTransition from "./transitions/TypewriterTransition.vue";
 
 export default {
   components: {
     SvgIcon,
-    TypewriterTransition,
   },
   setup() {
     return {

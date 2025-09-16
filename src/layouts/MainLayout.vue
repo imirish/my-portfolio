@@ -2,7 +2,7 @@
   <div class="h-screen w-screen font-poppins">
     <AutoScrollPage :pages="pages" />
     <Logo />
-    <NavigationV2 />
+    <Navigation />
     <main class="overflow-hidden">
       <Transition
         mode="out-in"
@@ -22,13 +22,13 @@
 <script lang="ts">
 import AutoScrollPage from "@/components/common/AutoScrollPage.vue";
 import Logo from "@/components/common/Logo.vue";
-import NavigationV2 from "@/components/common/NavigationV2.vue";
+import Navigation from "@/components/common/Navigation.vue";
 
 import { useRoute } from "vue-router";
 
 export default {
   components: {
-    NavigationV2,
+    Navigation,
     AutoScrollPage,
     Logo,
   },
