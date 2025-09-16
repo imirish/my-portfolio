@@ -1,8 +1,8 @@
 <template>
-  <section class="relative h-screen flex justify-center md:items-center pt-[5rem]">
-    <div
-      class="flex flex-row gap-12"
-    >
+  <section
+    class="relative h-screen flex justify-center md:items-center pt-[5rem]"
+  >
+    <div class="flex flex-row gap-12">
       <div class="absolute bottom-0 md:relative">
         <img
           src="@/assets/homepage/avatar.svg"
@@ -25,6 +25,23 @@
           >
             Software Engineer | Frontend Developer
           </h1>
+
+          <div class="flex flex-row gap-4 mt-4">
+            <div class="scale-transtion cursor-pointer">
+              <SvgIcon
+                :iconPath="mdiLinkedin"
+                iconClass="w-10 h-10 text-black"
+                @click="navigateToLinkedIn"
+              />
+            </div>
+            <div class="scale-transtion cursor-pointer">
+              <SvgIcon
+                :iconPath="mdiGithub"
+                iconClass="w-10 h-10 text-black"
+                @click="navigateToGithub"
+              />
+            </div>
+          </div>
         </div>
 
         <div
@@ -52,7 +69,7 @@
           </div>
 
           <button
-            class="bg-[#6FC1F9] primary-btn"
+            class="bg-[#6FC1F9] primary-btn scale-transtion"
             v-ripple
             @click="downloadCv"
           >
@@ -88,15 +105,17 @@ export default {
   },
   methods: {
     navigateToLinkedIn() {
-      window.open("https://www.linkedin.com/in/irishgarcia/", "_blank");
+      const linkedInUrl = import.meta.env.VITE_LINKEDIN_URL || "";
+      window.open(linkedInUrl, "_blank");
     },
     navigateToGithub() {
-      window.open("https://github.com/imirish", "_blank");
+      const githubUrl = import.meta.env.VITE_GITHUB_URL || "";
+      window.open(githubUrl, "_blank");
     },
     downloadCv() {
       const link = document.createElement("a");
-      link.href =
-        "https://drive.google.com/uc?export=download&id=1jgjWzX2aZT2S-V4slX4zQOGkYuN00ECu";
+      const driveId = import.meta.env.VITE_CV_ID || "";
+      link.href = `https://drive.google.com/uc?export=download&id=${driveId}`;
       link.download = "Danica-Garcia-CV.pdf";
       link.click();
     },

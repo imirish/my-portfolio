@@ -1,9 +1,12 @@
 /// <reference types="vite/client" />
+interface ImportMetaEnv {
+  // Core
+  readonly VITE_GITHUB_URL: string;
+  readonly VITE_LINKEDIN_URL: string;
+  readonly VITE_FIGMA_URL: string;
+  readonly VITE_CV_ID: string;
+}
 
-import { FirebasePlugin } from "@/plugins/firebase";
-
-declare module "@vue/runtime-core" {
-  interface ComponentCustomProperties {
-    $firebase: FirebasePlugin;
-  }
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
 }

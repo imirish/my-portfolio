@@ -11,14 +11,10 @@
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
-
 export default {
   components: {},
   setup() {
-    const figmaLink = ref(
-      "https://www.figma.com/design/zETZbLCcxmnWbZ5eYyg9jH/Collection-of-Simple-Designs?t=I0lG7EM4TqXpKZ49-1"
-    );
+    const figmaLink = import.meta.env.VITE_FIGMA_URL || "";
 
     return {
       figmaLink,
