@@ -69,7 +69,7 @@
           </div>
 
           <button
-            class="bg-[#6FC1F9] primary-btn scale-transtion"
+            class="bg-[#6FC1F9] primary-btn"
             v-ripple
             @click="downloadCv"
           >
