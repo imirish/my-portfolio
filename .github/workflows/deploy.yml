@@ -30,6 +30,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Create env file
+        run: |
+          echo "${{ secrets.STAGING_B64 }}" | base64 -d > .env
+
+
       - name: Build project
         run: yarn build
 
