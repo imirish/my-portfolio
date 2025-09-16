@@ -28,8 +28,17 @@ jobs:
 
       - name: Create env file
         run: |
-          echo '${{ secrets.STAGING_B64 }}' | base64 -d > .env
+          echo "${{ secrets.STAGING_B64 }}" | base64 -d > .env
 
+      - name: Verify .env exists
+        run: |
+          if [ -s .env ]; then
+            echo ".env created successfully"
+            head -n 3 .env | sed 's/=.*/=*** (redacted)/'
+          else
+            echo ".env file is empty!"
+            exit 1
+          fi
 
       - name: Build project
         run: yarn build
