@@ -1,17 +1,16 @@
 <template>
-  <section class="relative h-screen flex justify-center pt-20 md:pt-[10rem]">
+  <section class="relative h-screen flex justify-center md:items-center pt-[5rem]">
     <div
-      class="flex flex-col gap-12 xs:gap-20 pl-6 xs:pl-0 md:pl-[15rem] xl:pl-0"
+      class="flex flex-row gap-12"
     >
-      <div class="flex flex-col gap-28 tracking-tight">
-        <div class="absolute z-0 left-0 bottom-0">
-          <img
-            src="@/assets/homepage/avatar.svg"
-            alt="Avatar"
-            class="h-[22rem] md:h-[33rem] xl:h-[40rem]"
-          />
-        </div>
-
+      <div class="absolute bottom-0 md:relative">
+        <img
+          src="@/assets/homepage/avatar.svg"
+          alt="Avatar"
+          class="h-[22rem] md:h-[33rem] xl:h-[40rem]"
+        />
+      </div>
+      <div class="flex flex-col gap-12 md:gap-28 px-4 xs:px-0 tracking-tight">
         <div class="flex flex-col items-start leading-none gap-2">
           <h1 class="text-48px xl:text-128px text-[#4997CD] font-semibold">
             Hello!
@@ -27,44 +26,44 @@
             Software Engineer | Frontend Developer
           </h1>
         </div>
-      </div>
 
-      <div
-        class="flex flex-col items-end gap-6 justify-end leading-none uppercase text-black text-24px xl:text-36px"
-      >
-        <div class="flex flex-col items-start justify-start leading-none">
-          <h1 class="font-semibold">Your Next</h1>
-          <span class="flex items-center font-semibold">
-            <span>
-              Pr
-              <img
-                src="@/assets/homepage/letter-o.svg"
-                alt="Letter O"
-                class="w-6 h-6 inline-block mb-1"
-              />
-              blem S
-              <img
-                src="@/assets/homepage/letter-o.svg"
-                alt="Letter O"
-                class="w-6 h-6 inline-block mb-1"
-              />
-              lver
-            </span>
-          </span>
-        </div>
-
-        <button
-          class="bg-[#6FC1F9] primary-btn"
-          v-ripple
-          @click="downloadCv"
+        <div
+          class="flex flex-col items-start gap-6 justify-start leading-none uppercase text-black text-24px xl:text-36px"
         >
-          <span class="text-12px lg:text-16px">Download CV</span>
-          <img
-            src="@/assets/common/arrow-right.svg"
-            alt="Arrow"
-            class="w-8 h-8 md:w-10 md:h-10 inline-block"
-          />
-        </button>
+          <div class="flex flex-col items-start justify-start leading-none">
+            <h1 class="font-semibold">Your Next</h1>
+            <span class="flex items-center font-semibold">
+              <span>
+                Pr
+                <img
+                  src="@/assets/homepage/letter-o.svg"
+                  alt="Letter O"
+                  class="w-6 h-6 inline-block mb-1"
+                />
+                blem S
+                <img
+                  src="@/assets/homepage/letter-o.svg"
+                  alt="Letter O"
+                  class="w-6 h-6 inline-block mb-1"
+                />
+                lver
+              </span>
+            </span>
+          </div>
+
+          <button
+            class="bg-[#6FC1F9] primary-btn"
+            v-ripple
+            @click="downloadCv"
+          >
+            <span class="text-12px lg:text-16px">Download CV</span>
+            <img
+              src="@/assets/common/arrow-right.svg"
+              alt="Arrow"
+              class="w-8 h-8 md:w-10 md:h-10 inline-block"
+            />
+          </button>
+        </div>
       </div>
     </div>
   </section>
